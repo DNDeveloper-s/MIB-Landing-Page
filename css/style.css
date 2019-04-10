@@ -6,12 +6,17 @@ http://www.templatemo.com/tm-486-new-event
 
 */
 
+html {
+  overflow-x: hidden;
+}
+
 body {
 		background: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
 		font-weight: 400;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100vw;
 }
 
 
@@ -868,7 +873,8 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     font-family: 'Source Sans Pro', sans-serif;
 }
 .home-iphone{
-    text-align: center;
+  transform: translate(0 , -43px);
+  text-align: center;
   border:#337ab7 1px solid;
   border-radius:16px;
   background:#555555b8;
@@ -878,7 +884,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   top: 50px;
   right: 0;
 }
-
 
 
 .table-disco{
@@ -1058,15 +1063,23 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
 
   .container__home .home-iphone {
-  transform: translate(500px, -40px); 
+  /* transform: translate(500px, -40px);  */
+  width: 0px;
   transition: transform 300ms  ease-in-out, opacity 700ms ease-in-out;
   transform-origin: right;
   opacity: 0;
   }
+  .container__home .home-iphone > * {
+    display: none;
+  }
 
   .container__home:hover .home-iphone {
-  transform: translate(0px, -40px);
+  /* transform: translate(0px, -40px); */
+  width: 100%;
   opacity: 1;
+  }
+  .container__home:hover .home-iphone > *{
+    display: block;
   }
   .container__home:hover {
     width: 350px;
